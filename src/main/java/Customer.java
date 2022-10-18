@@ -1,18 +1,36 @@
-import vehicles.IDrive;
+import vehicles.ISell;
+import vehicles.PetrolCar;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Customer {
 
+    PetrolCar petrolCar;
     private String name;
     private double funds;
-    HashMap<String, IDrive> carsOwners;
+    ArrayList<ISell> carsOwned;
 
     private String CarName;
 
-    public Customer(String name, double funds, HashMap<String, IDrive> carsOwners) {
+    public Customer(String name, double funds) {
         this.name = name;
         this.funds = funds;
-        this.carsOwners = carsOwners;
+        this.carsOwned = new ArrayList<>();
+    }
+
+    public int getNumberOfCarsOwned(){
+        return carsOwned.size();
+    }
+
+    public double getFunds() {
+        return funds;
+    }
+
+    public void setFunds(double funds) {
+        this.funds = funds;
+    }
+
+    public void buyCar(ISell car){
+        carsOwned.add(car);
     }
 }

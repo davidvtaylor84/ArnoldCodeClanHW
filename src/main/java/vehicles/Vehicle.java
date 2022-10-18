@@ -5,7 +5,7 @@ import carComponents.SoundSystem;
 import carComponents.Tyres;
 import carComponents.WindowGlass;
 
-public abstract class Vehicle implements IDrive{
+public abstract class Vehicle implements ISell {
 
     private String model;
     private String manufacturer;
@@ -43,9 +43,7 @@ public abstract class Vehicle implements IDrive{
         return price;
     }
 
-    public String drive(){
-        return "Vroom vroom!";
-    }
+
 
     public void setSoundSystem(SoundSystem soundSystem) {
         this.soundSystem = soundSystem;
@@ -62,4 +60,9 @@ public abstract class Vehicle implements IDrive{
     public String getPowerTypeFromEnum(){
         return this.engineType.getPowerType();
     }
+
+    public Double sell(){
+        return price;
+    }
+
 }
