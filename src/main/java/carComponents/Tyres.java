@@ -14,7 +14,7 @@ public class Tyres {
         this.height = height;
     }
 
-    public String getManufacturer() {
+    public String getTyreManufacturer() {
         return manufacturer;
     }
 

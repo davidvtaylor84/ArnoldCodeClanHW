@@ -31,7 +31,7 @@ public abstract class Vehicle implements IDrive{
         return model;
     }
 
-    public String getManufacturer() {
+    public String getCarManufacturer() {
         return manufacturer;
     }
 

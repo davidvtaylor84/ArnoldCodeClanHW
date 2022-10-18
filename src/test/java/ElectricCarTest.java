@@ -26,7 +26,7 @@ public class ElectricCarTest {
 
     @Test
     public void canGetCarManufacturer(){
-        assertEquals("Tesla", electricCar.getManufacturer());
+        assertEquals("Tesla", electricCar.getCarManufacturer());
     }
 
     @Test

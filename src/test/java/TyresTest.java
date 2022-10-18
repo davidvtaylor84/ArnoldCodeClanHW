@@ -15,7 +15,7 @@ public class TyresTest {
 
     @Test
     public void tyresHaveManufacturer(){
-        assertEquals("Michelin", tyres.getManufacturer());
+        assertEquals("Michelin", tyres.getTyreManufacturer());
     }
 
     @Test
