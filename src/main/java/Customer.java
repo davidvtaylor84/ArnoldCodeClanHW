@@ -33,4 +33,8 @@ public class Customer {
     public void buyCar(ISell car){
         carsOwned.add(car);
     }
+
+    public void reduceMoney(double pay){
+        funds -= pay;
+    }
 }

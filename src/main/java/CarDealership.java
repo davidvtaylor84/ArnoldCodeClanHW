@@ -33,14 +33,16 @@ public class CarDealership {
         this.selectedCar = name;
     }
 
-    public void sellCar(String name){
+    public void sellCar(String name, Customer customer){
         setSelectedCar(name);
         double salePrice = stock.get(selectedCar).sell();
         this.till += salePrice;
+        customer.reduceMoney(salePrice);
+        customer.carsOwned.add(stock.get(selectedCar));
         stock.remove(selectedCar);
     }
 
-    public double getTill() {
+    public double getTill(){
         return till;
     }
 }
